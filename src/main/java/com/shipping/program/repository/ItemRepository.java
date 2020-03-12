@@ -12,7 +12,7 @@ public interface ItemRepository extends CrudRepository<Item, Long> {
             "JOIN i.seller s " +
             "JOIN i.category c ON c.id = :categoryId " +
             "WHERE i.title = :title " +
-            "AND s.name LIKE %:sellerName% " +
+            "AND lower(s.name) LIKE lower(concat('%', :sellerName, '%')) " +
             "AND i.price = :price " +
             "AND i.price >= c.minAmt " +
             "AND s.enrolled = true " +
