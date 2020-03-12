@@ -1,4 +1,4 @@
-package com.shipping.program.entity;
+package com.shipping.program.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +22,8 @@ public class Category
     private String name;
 
     private boolean preApproved;
+
+    private double minAmt;
 
     @Column(insertable = true, updatable = false)
     private LocalDateTime created;

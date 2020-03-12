@@ -1,8 +1,7 @@
-package com.shipping.program.entity;
+package com.shipping.program.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;

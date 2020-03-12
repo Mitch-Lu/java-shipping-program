@@ -1,4 +1,4 @@
-package com.shipping.program.entity;
+package com.shipping.program.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,16 +17,13 @@ public class Item
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private long sellerId;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn
+    private Seller seller;
 
-    private long categoryId;
-
-    public Item(long sellerId, long categoryId, String title, double price) {
-        this.sellerId = sellerId;
-        this.categoryId = categoryId;
-        this.title = title;
-        this.price = price;
-    }
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn
+    private Category category;
 
     @NotNull
     @NotBlank

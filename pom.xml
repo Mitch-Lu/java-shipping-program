@@ -11,7 +11,7 @@
 	<groupId>com.shipping</groupId>
 	<artifactId>program</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>program</name>
+	<name>shipping-program</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
