@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface ItemRepository extends CrudRepository<Item, Long> {
-    @Query("FROM Item i " +
+    @Query("SELECT i FROM Item i " +
             "JOIN i.seller s " +
             "JOIN i.category c ON c.id = :categoryId " +
             "WHERE i.title = :title " +
